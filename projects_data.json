@@ -1,6 +1,6 @@
 {
     "title": "Web Projects",
-    "tagline": "Interactive things I have built for teaching and for research &mdash; all of them running in the browser, with nothing to install.",
+    "tagline": "Interactive things I have built for teaching and for research, all of them running in the browser, with nothing to install.",
 
     "groups": [
         {
@@ -33,7 +33,7 @@
                     "name": "Chilean Spatiotemporal Topic Map",
                     "kicker": "Data visualisation",
                     "url": "board.html",
-                    "description": "An interactive map of how Chilean news covers the energy transition. Twelve dynamic topics &mdash; from lithium and copper mining to green hydrogen, glaciers and industrial &ldquo;sacrifice zones&rdquo;, grouped into five clusters and mapped across regions, provinces and comunas. Play the timeline to watch topic prevalence shift, click a location for its own curves, and follow each topic's leading words over time. Spanish and English.",
+                    "description": "An interactive map of how Chilean news covers the energy transition. Twelve dynamic topics from lithium and copper mining to green hydrogen, glaciers and industrial &ldquo;sacrifice zones&rdquo;, grouped into five clusters and mapped across regions, provinces and comunas. Play the timeline to watch topic prevalence shift, click a location for its own curves, and follow each topic's leading words over time. Spanish and English.",
                     "tags": ["topic models", "spatio-temporal", "chile"]
                 }
             ]

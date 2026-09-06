@@ -27,7 +27,7 @@
         },
         {
             "dates": "2019&ndash;2021",
-            "text": "<strong>M.Sc. Statistics</strong>, thesis on unsupervised sentiment analysis &mdash; which later grew into <a href=\"cv.html#software\">Lex2Sent</a>, my first published software package and paper."
+            "text": "<strong>M.Sc. Statistics</strong>, thesis on unsupervised sentiment analysis, which later grew into <a href=\"cv.html#software\">Lex2Sent</a>, my first published software package and paper."
         },
         {
             "dates": "2016&ndash;2019",
@@ -44,7 +44,7 @@
     "research": [
         {
             "title": "Conspiracy theories in social media",
-            "text": "How conspiratorial narratives emerge, mutate and travel across platforms &mdash; and what that says about the health of public debate.",
+            "text": "How conspiratorial narratives emerge, mutate and travel across platforms and what that says about the health of public debate.",
             "tags": ["harmful discourse", "social media", "detection"]
         },
         {
