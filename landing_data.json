@@ -1,0 +1,82 @@
+{
+    "name": "Kai-Robin Lange",
+    "title": "Dr.",
+    "position": "Postdoctoral Researcher, TU Dortmund University",
+    "pronouns": "he/they",
+    "photo": "portrait.png",
+    "email": "website@krlange.de",
+    "website": "krlange.de",
+    "location": "Dortmund, Germany",
+
+    "sidebar_bio": "I'm <strong>Kai</strong>, a statistician and NLP researcher at TU Dortmund University. This is where I keep my papers, talks, teaching and code.",
+
+    "tagline": "Statistician, Data Scientist & NLP researcher.",
+
+    "timeline": [
+        {
+            "dates": "2025&ndash;now",
+            "text": "<strong>Postdoctoral researcher</strong>: detecting conspiracy theories in social media, spatio-temporal language models, and the German energy transition discourse. Also lecturing on NLP and text mining."
+        },
+        {
+            "dates": "2025&ndash;now",
+            "text": "<strong>External Lecturer</strong>: teaching students of the Master Business Analytics at EBS University of Business and Law the fundamentals of Natural Language Processing and Text Mining."
+        },
+        {
+            "dates": "2021&ndash;2025",
+            "text": "<strong>Doctoral researcher</strong>: extracting economic narratives from text, temporal language modelling, NLP-based media analysis. Dissertation passed <em>magna cum laude</em>."
+        },
+        {
+            "dates": "2019&ndash;2021",
+            "text": "<strong>M.Sc. Statistics</strong>, thesis on unsupervised sentiment analysis &mdash; which later grew into <a href=\"cv.html#software\">Lex2Sent</a>, my first published software package and paper."
+        },
+        {
+            "dates": "2016&ndash;2019",
+            "text": "<strong>B.Sc. Statistics</strong> at TU Dortmund University, with a minor in computer science."
+        }
+    ],
+
+    "also": "Also: workshop host for data journalists, co-organizer of the \"Natural Language in Economics\" seminar series, examination board member, and a Text2Story best-paper runner-up.",
+
+    "bubble": "Want to get in contact? <a href=\"mailto:website@krlange.de\">Write me a mail!</a>",
+
+    "research_intro": "I design language models that make political and economic discourse measurable, then point them at news articles, parliamentary speeches and social media posts.",
+
+    "research": [
+        {
+            "title": "Conspiracy theories in social media",
+            "text": "How conspiratorial narratives emerge, mutate and travel across platforms &mdash; and what that says about the health of public debate.",
+            "tags": ["harmful discourse", "social media", "detection"]
+        },
+        {
+            "title": "Temporal & spatial language modelling",
+            "text": "Treating text as a moving target: rolling topic models, diachronic embeddings and semantic shift detection over years of text.",
+            "tags": ["topic models", "embeddings", "semantic shift"]
+        },
+        {
+            "title": "Economic narratives",
+            "text": "Extracting the stories economies tell about themselves, combining dynamic topic models with large language models.",
+            "tags": ["economics", "LLMs", "narratives"]
+        },
+        {
+            "title": "The German energy transition",
+            "text": "Tracking how the Energiewende is argued about in parliaments and the press, and how those arguments shift over time.",
+            "tags": ["energy", "parliament", "media analysis"]
+        }
+    ],
+
+    "featured_count": 6,
+
+    "about": [
+        "I am a statistician and data scientist specializing in Natural Language Processing and AI, with a strong passion for using my knowledge to help us to better understand and quantify how societies communicate and evolve.",
+        "In my current research, I am focusing on analyzing political narratives - with a particular interest in how harmful discourse (including conspiracy theories) emerges, transforms, and spreads. My goal is to uncover patterns in the digital information flow and the forces shaping it by designing language models and applying them to corpora of news articles, political speeches or social media posts.",
+        "I aim to contribute research that helps to support a functional democracy. I am always interested in connecting with researchers, journalists, institutions, and organizations exploring the intersection of AI, politics, and society."
+    ],
+
+    "contact": "The quickest way to reach me is by email. I am always glad to hear from researchers, journalists, institutions and organizations working at the intersection of AI, politics and society about a joint project, a guest lecture or workshop, a data-driven story, or a thesis topic.",
+
+    "links": [
+        {"name": "GitHub", "url": "https://github.com/K-RLange", "icon": "github"},
+        {"name":  "LinkedIn", "url":  "https://www.linkedin.com/in/kai-robin-lange-323062382/", "icon":  "linkedin"},
+        {"name": "Google Scholar", "url": "https://scholar.google.de/citations?user=JmLv2XgAAAAJ", "icon": "scholar"}
+    ]
+}

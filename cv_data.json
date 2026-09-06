@@ -1,0 +1,435 @@
+{
+    "name": "Kai-Robin Lange",
+    "title": "Dr.",
+    "position": "Postdoctoral Researcher, TU Dortmund University",
+    "pronouns": "he/him",
+    "photo": "portrait.png",
+    "email": "website@krlange.de",
+    "website": "krlange.de",
+    "location": "Dortmund, Germany",
+    "summary": ["I am a statistician and data scientist specializing in Natural Language Processing and AI, with a strong passion for using my knowledge to help us to better understand and quantify how societies communicate and evolve.", "In my current research, I am focusing on analyzing political narratives - with a particular interest in how harmful discourse (including conspiracy theories) emerges, transforms, and spreads. My goal is to uncover patterns in the digital information flow and the forces shaping it by designing language models and applying them to corpora of news articles, political speeches or social media posts.", "I aim to contribute research that not only advances AI but also helps to support a functional democracy. I am always interested in connecting with researchers, journalists, institutions, and organizations exploring the intersection of AI, politics, and society."],
+    "downloads": [
+        {"name": "Short CV", "file": "shortCV.pdf"},
+        {"name": "Research CV", "file": "researchCV.pdf"}
+    ],
+
+
+
+    "experience": [
+        {
+            "position": "External Lecturer",
+            "organization": "EBS University of Business and Law",
+            "year": "03/2026-09/2026",
+            "description": "Lecturer for NLP courses for the Master in Business Analytics"
+        },
+        {
+            "position": "Postdoctoral Researcher",
+            "organization": "TU Dortmund University",
+            "year": "10/2025-present",
+            "description": ["Organizing lectures, exercises, and seminars", "Supervising master- and bachelor theses", "Acquiring third-party funds", {"Conducting research on": ["detecting conspiracy theories in social media", "spatio-temporal language modeling", "the German energy transition discourse"]}]
+        },
+        {
+            "position": "External Lecturer",
+            "organization": "EBS University of Business and Law",
+            "year": "03/2025-07/2025",
+            "description": "Lecturer for NLP courses for the Master in Business Analytics"
+        },
+        {
+            "position": "Doctoral Researcher",
+            "organization": "TU Dortmund University",
+            "year": "11/2021-09/2025",
+            "description": ["Organizing exercises, seminars, and parts of lectures", "Supporting the supervision of master- and bachelor theses", {"Conducted research": ["Extracting economic narratives from texts", "NLP-based media analysis", "Temporal language modeling"]}]
+        },
+        {
+            "position": "Research Assistant",
+            "organization": "TU Dortmund University",
+            "year": "03/2020-10/2021",
+            "description": ["Collecting and curating data", "Editing lecture scripts"]
+        }
+    ],	
+    "education": [
+        {
+            "degree": "Dr. rer. nat. (Statistics)",
+            "institution": "TU Dortmund University",
+            "year": "11/2021-09/2025",
+            "notes": ["Grade: magna cum laude. Dissertation: magna cum laude, disputation: summa cum laude", "Thesis: Extracting economic narratives using natural language processing: A temporal perspective"]
+        },
+		
+        {
+            "degree": "M.Sc. in Statistics",
+            "institution": "TU Dortmund University",
+            "year": "2019-2021",
+            "notes": ["Grade: 1.5", "Minor in Computer Science", "Thesis: Resampling strategies for unsupervised sentiment analysis using lexicon-based text embedding methods"]
+        },
+		
+        {
+            "degree": "B.Sc. in Statistics",
+            "institution": "TU Dortmund University",
+            "year": "2016-2019",
+            "notes": ["Grade: 1.8", "Minor in Computer Science"]
+        }
+    ],
+
+    "publications": [
+        {
+            "authors": "Rieger, J., Muñoz, F., Grönberg, L., Lange, K.-R., Ojeda-Pereira, I., Briceño, D., Nass, C., Stahl, C., Cassola, J., Rojas-Córdova, C., Keith-Norambuena, B., Lufin, M., Campos-Medina, F. & Herrera-León, S.",
+            "title": "ollowing Socio-Environmental Conflict Narratives About Energy Transition in Chile: A Spatio-Temporal Analysis Using Dynamic Topic Modeling",
+            "journal": "Proceedings of the Text2Story'26 Workshop @ ECIR 2026",
+            "year": "04/2026",
+            "doi": "https://ceur-ws.org/Vol-4202/paper5.pdf"
+        },
+        {
+            "authors": "Kolli, I., Lange, K.-R., Rieger, J. & Jentsch, C.",
+            "title": "Word-Centered Semantic Graphs for Interpretable Diachronic Sense Tracking",
+            "journal": "arXiv",
+            "year": "02/2026",
+            "doi": "https://doi.org/10.48550/arXiv.2601.22410"
+        },
+        {
+            "authors": "Lange, K.-R.",
+            "title": "Extracting Economic Narratives using Natural Language Processing: A temporal perspective",
+            "year": "09/2025",
+			"notes": "Dissertation",
+            "doi": "http://doi.org/10.17877/DE290R-25787"
+        },
+        {
+            "authors": "Schmidt, T., Lange, K.-R., Reccius, M., Müller, H., Roos, M., & Jentsch, C.",
+            "title": "Identifying economic narratives in large text corpora - An integrated approach using Large Language Models",
+            "year": "06/2025",
+			"journal": "Ruhr Economic Papers #1163",
+            "doi": "https://doi.org/10.4419/96973348%0A"
+        },
+        {
+            "authors": "Lange, K.-R., Reccius, M., Schmidt, T., Müller, H., Roos, M., & Jentsch, C.",
+            "title": "Narrative Shift detection: A hybrid approach of Dynamic Topic Models and Large Language Models",
+            "year": "04/2025",
+			"journal": "Proceedings of the Text2Story’25 Workshop @ ECIR 2025",
+			"notes": "Best paper award (runner up)",
+            "link": "https://ceur-ws.org/Vol-3964/paper6.pdf"
+        },
+        {
+            "authors": "Lange, K.-R., Benner, N., Grönberg, L., Hachcham, A., Kolli, I., Rieger, J. & Jentsch, C.",
+            "title": "ttta: Tools for Temporal Text Analysis",
+            "year": "04/2025",
+			"journal": "arXiv",
+            "doi": "https://doi.org/10.48550/arXiv.2503.02625"
+        },
+        {
+            "authors": "Lange, K.-R., Rieger, J. & Jentsch, C.",
+            "title": "Lex2Sent: A bagging approach to unsupervised sentiment analysis",
+            "year": "09/2024",
+			"journal": "Proceedings of the 20th Conference on Natural Language Processing",
+            "link": "https://aclanthology.org/2024.konvens-main.28/"
+        },
+        {
+            "authors": "Lange, K.-R. & Jentsch, C.",
+            "title": "SpeakGer: A meta-data enriched speech corpus of German state and federal parliaments",
+            "year": "09/2023",
+			"journal": "Proceedings of the 3rd Workshop on Computational Linguistics for Political Text Analysis @ KONVENS 2023",
+            "link": "https://aclanthology.org/2023.cpss-1.3.pdf"
+        },
+        {
+            "authors": "Lange, K.-R., Rieger, J., Benner, N. & Jentsch, C.",
+            "title": "Zeitenwenden: Detecting changes in the German political discourse",
+            "year": "09/2022",
+			"journal": "Proceedings of the 2nd Workshop on Computational Linguistics for Political Text Analysis @ KONVENS 2022"
+        },
+        {
+            "authors": "Lange, K.-R., Reccius, M., Schmidt, T., Müller, H., Roos, M., & Jentsch, C.",
+            "title": "Towards extracting collective economic narratives from texts",
+            "year": "08/2022",
+			"journal": "Ruhr Economic Papers #963",
+            "link": "https://doi.org/10.4419/96973127%0A"
+        },
+        {
+            "authors": "Benner, N., Lange, K.-R., & Jentsch, C.",
+            "title": "Named Entity Narratives",
+            "year": "08/2022",
+			"journal": "Ruhr Economic Papers #962",
+            "link": "https://doi.org/10.4419/96973126%0A"
+        },
+        {
+            "authors": "Rieger, J., Lange, K.-R., Flossdorf, J. & Jentsch, C.",
+            "title": "Dynamic change detection in topics based on rolling LDAs",
+            "year": "2022",
+			"journal": "Proceedings of the Text2Story’22 Workshop @ ECIR 2022",
+            "link": "http://ceur-ws.org/Vol-3117/paper1.pdf"
+        }
+    ],
+
+    "talks": [
+        {
+            "title": "Identifying economic narratives in large text corpora",
+            "event": "Strathclyde Text Analytics Group",
+            "location": "Glasgow, Schotland",
+            "year": "01/2027",
+            "notes": "Invited Talk"
+        },
+        {
+            "title": "Mining a rabbit hole: leveraging language models to traverse conspiracy theory narratives in telegram channels",
+            "event": "CMStatistics 2026",
+            "location": "Berlin, Germany",
+            "year": "12/2026",
+            "notes": "Invited Talk"
+        },
+        {
+            "title": "Identifying economic narratives in large text corpora",
+            "event": "Statistische Woche 2026",
+            "location": "Essen, Germany",
+            "year": "09/2026",
+            "notes": ""
+        },
+        {
+            "title": "Narrative Shift Detection: A Hybrid Approach of Dynamic Topic Models and Large Language Models",
+            "event": "CMStatistics 2025",
+            "location": "London, United Kingdom",
+            "year": "12/2025",
+            "notes": "Invited Talk"
+        },
+        {
+            "title": "Webscraping für Datenjournalist:innen: Hands-on workshop zum Extrahieren von Daten aus dem Internet",
+            "event": "SciCAR 2025",
+            "location": "Dortmund, Germany",
+            "year": "09/2025",
+            "notes": ""
+        },
+        {
+            "title": "MATILDA: A Meta-data Aware and Temporally Induced Latent Dirichlet Allocation",
+            "event": "DAGStat 2025",
+            "location": "Berlin, Germany",
+            "year": "03/2025",
+            "notes": ""
+        },
+        {
+            "title": "Algorithmic Accountability: Wie messen und vermitteln wir, ob Algorithmen zuverlässig und fair arbeiten?",
+            "event": "SciCAR 2024",
+            "location": "Dortmund, Germany",
+            "year": "09/2024",
+            "notes": ""
+        },
+        {
+            "title": "Tools for Temporal Text Analysis: A Python code collection for diachronic NLP tasks",
+            "event": "CPSS Workshop",
+            "location": "Vienna, Austria",
+            "year": "09/2024",
+            "notes": ""
+        },
+        {
+            "title": "Lex2Sent: A bagging approach to unsupervised sentiment analysis",
+            "event": "KONVENS 2024",
+            "location": "Vienna, Austria",
+            "year": "09/2024",
+            "notes": ""
+        },
+        {
+            "title": "Identifying economic narratives in large text corpora",
+            "event": "COMPTEXT 2024",
+            "location": "Amsterdam, Netherlands",
+            "year": "05/2024",
+            "notes": ""
+        },
+        {
+            "title": "SpeakGer: A meta-data enriched speech corpus of German state and federal parliaments",
+            "event": "CPSS Workshop",
+            "location": "Potsdam, Germany",
+            "year": "09/2023",
+            "notes": ""
+        },
+        {
+            "title": "Roll2Vec: updating diachronic embeddings with a rolling window",
+            "event": "Statistische Woche 2023",
+            "location": "Dortmund, Germany",
+            "year": "09/2023",
+            "notes": ""
+        },
+        {
+            "title": "Zeitenwenden: Detecting changes in the German political discourse",
+            "event": "CPSS Workshop",
+            "location": "Potsdam, Germany",
+            "year": "09/2022",
+            "notes": ""
+        }
+    ],
+
+    "teaching": [
+        {
+            "title": "Natural Language Processing",
+            "institution": "EBS University of Business and Law",
+            "type": "Lecture & Tutorial",
+            "semesters": ["Spring 25", "Spring 26"]
+        },
+        {
+            "title": "Natural Language Processing",
+            "institution": "TU Dortmund University",
+            "type": "Tutorial & parts of lecture",
+            "semesters": ["Winter 23/24", "Winter 24/25", "Winter 25/26"]
+        },
+        {
+            "title": "Text Mining",
+            "institution": "EBS University of Business and Law",
+            "type": "Lecture & Tutorial",
+            "semesters": ["Spring 25", "Spring 26"]
+        },
+        {
+            "title": "Kann Code Verantwortung? Wie man Algorithmic Accountability untersucht und vermittelt",
+            "institution": "TU Dortmund University",
+            "type": "Seminar",
+            "semesters": ["Winter 24/25", "Winter 25/26"]
+        },
+        {
+            "title": "Introduction to Python",
+            "institution": "University Alliance Ruhr",
+            "type": "Open educational resource",
+            "semesters": ["Summer 25"]
+        },
+        {
+            "title": "Advanced Text Mining Methods",
+            "institution": "TU Dortmund University",
+            "type": "Seminar",
+            "semesters": ["Winter 22/23", "Summer 24"]
+        },
+        {
+            "title": "Text as Data",
+            "institution": "TU Dortmund University",
+            "type": "Tutorial & part of lecture",
+            "semesters": ["Winter 22/23"]
+        },
+        {
+            "title": "Asymptotic Theory",
+            "institution": "TU Dortmund University",
+            "type": "Tutorial",
+            "semesters": ["Winter 21/22", "Winter 22/23"]
+        },
+        {
+            "title": "Entscheidungstheorie",
+            "institution": "TU Dortmund University",
+            "type": "Tutorial",
+            "semesters": ["Summer 23"]
+        }
+    ],
+
+    "theses": [
+        {
+            "title": "Multimodal Time-LLM: Integrating visual and temporal data for time series forecasting using large language models",
+            "student": "Yat Chun Fung",
+            "year": "2026",
+            "level": "Master"
+        },
+        {
+            "title": "Parameter optimization for RollingLDA",
+            "student": "Nishat Tasnim Ahmed Meem",
+            "year": "2026",
+            "level": "Master"
+        },
+        {
+            "title": "Diachronic Sense Modelling with Hierarchical Word Embeddings",
+            "student": "Aymane Hachcham",
+            "year": "2024",
+            "level": "Master"
+        },
+        {
+            "title": "Semantic shift modelling using graph neural networks",
+            "student": "Imene Kolli",
+            "year": "2024",
+            "level": "Master"
+        },
+        {
+            "title": "Comparison of Active Learning techniques for the benefit of data set generation in the field of text mining",
+            "student": "Jannik Bloß",
+            "year": "2023",
+            "level": "Bachelor"
+        }
+    ],
+
+    "software": [
+        {
+            "name": "ttta: Tools for Temporal Text Analysis",
+            "year": "09/2024",
+            "type": "Python Library",
+            "links": [
+                {"name": "GitHub", "url": "https://github.com/K-RLange/ttta"},
+                {"name": "PyPi", "url": "https://pypi.org/project/ttta/"}
+            ]
+        },
+        {
+            "name": "SpeakGer Corpus",
+            "year": "09/2023",
+            "type": "Text data corpus",
+            "links": [
+                {"name": "GitHub", "url": "https://github.com/K-RLange/SpeakGer"},
+                {"name": "Download", "url": "https://berd-platform.de/records/g3225-rba63"}
+            ]
+        },
+        {
+            "name": "Lex2Sent",
+            "year": "03/2023",
+            "type": "Python Library",
+            "links": [
+                {"name": "GitHub", "url": "https://github.com/K-RLange/Lex2Sent"},
+                {"name": "PyPi", "url": "https://pypi.org/project/lex2sent/"}
+            ]
+        }
+    ],
+
+    "service": [
+        "Reviewing for the \"Thinking Skills and Creativity\" journal. Since 2025.",
+        "Part of the organisation committees of the NEAR Conference 2024 and Statistische Woche 2023.",
+        "Deputy for the representative of the research associates in the department board of the Department of Statistics. TU Dortmund University, since 2024.",
+        "Member of the examination board for bachelor and master statistics. TU Dortmund University, since 2022.",
+        "Co-Organizer of the \"Natural Language in Economics\" online seminar series. 2023-2025."
+    ],
+
+    "awards": [
+        {
+            "name": "Best paper award (runner up)",
+            "organization": "11th Text2Story Workshop",
+            "year": "04/2025",
+            "notes": "For the paper \"Narrative Shift Detection: A hybrid approach of Dynamic Topic Models and Large Language Models\""
+        }
+    ],
+
+    "grants": [
+        {
+            "name": "Do Investors' Mental Models Transfer Across Markets?",
+            "funder": "Connex Fund, Hans-Riegel Stiftung",
+            "year": "08/2026",
+            "amount": "6,500€",
+            "notes": "joint with Paul Grass"
+        }
+    ],
+
+    "skills": [
+        {
+            "category": "Frameworks and Tools",
+            "items": [
+                {"name": "Git", "level": 5},
+                {"name": "SLURM", "level": 5},
+                {"name": "LaTeX", "level": 5},
+                {"name": "Docker", "level": 3}
+            ]
+        },
+        {
+            "category": "Programming",
+            "items": [
+                {"name": "Python", "level": 5},
+                {"name": "R", "level": 5},
+                {"name": "SQL", "level": 4},
+                {"name": "Java", "level": 3}
+            ]
+        },
+        {
+            "category": "Languages",
+            "items": [
+                {"name": "German", "level": 5},
+                {"name": "English", "level": 4}
+            ]
+        },
+        {
+            "category": "Operating Systems",
+            "items": [
+                {"name": "Windows", "level": 5},
+                {"name": "Linux", "level": 4}
+            ]
+        }
+    ]
+}

@@ -1,0 +1,42 @@
+{
+    "title": "Web Projects",
+    "tagline": "Interactive things I have built for teaching and for research &mdash; all of them running in the browser, with nothing to install.",
+
+    "groups": [
+        {
+            "id": "teaching-resources",
+            "title": "Teaching &amp; data literacy",
+            "description": "Open educational resources built for the Data Literacy programme at TU Dortmund University. Each one runs entirely in the browser, with editable live code, and is available in English and German.",
+            "projects": [
+                {
+                    "name": "Introduction to the impact of statistical biases",
+                    "kicker": "Open educational resource, interactive quizzes",
+                    "url": "https://krlange.de/dh_statistical_biases/",
+                    "description": "How different biases quietly distort what a statistical model tells you. Omitted-variable bias, sampling bias, survivorship bias and p-hacking are each worked through on artificial data you can change yourself, followed by a discussion and a quiz. No prior programming experience required.",
+                    "tags": ["statistics", "bias", "live code"]
+                },
+                {
+                    "name": "Introduction to Python",
+                    "kicker": "Open educational resource, interactive programming",
+                    "url": "https://krlange.de/dhPython/",
+                    "description": "An introduction to Python for absolute beginners: arithmetic and variables, data types, modules, pandas and matplotlib, descriptive analysis, conditions and loops, functions and classes and a closing chapter on setting Python up locally once the browser is no longer enough.",
+                    "tags": ["python", "pandas", "teaching"]
+                }
+            ]
+        },
+        {
+            "id": "research-tools",
+            "title": "Research tools",
+            "description": "Visualisations that let you explore the results of a paper yourself, rather than reading them off a figure.",
+            "projects": [
+                {
+                    "name": "Chilean Spatiotemporal Topic Map",
+                    "kicker": "Data visualisation",
+                    "url": "board.html",
+                    "description": "An interactive map of how Chilean news covers the energy transition. Twelve dynamic topics &mdash; from lithium and copper mining to green hydrogen, glaciers and industrial &ldquo;sacrifice zones&rdquo;, grouped into five clusters and mapped across regions, provinces and comunas. Play the timeline to watch topic prevalence shift, click a location for its own curves, and follow each topic's leading words over time. Spanish and English.",
+                    "tags": ["topic models", "spatio-temporal", "chile"]
+                }
+            ]
+        }
+    ]
+}
