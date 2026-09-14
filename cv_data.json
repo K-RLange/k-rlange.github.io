@@ -2,12 +2,12 @@
     "name": "Kai-Robin Lange",
     "title": "Dr.",
     "position": "Postdoctoral Researcher, TU Dortmund University",
-    "pronouns": "he/him",
+    "pronouns": "he/they",
     "photo": "portrait.png",
     "email": "website@krlange.de",
     "website": "krlange.de",
     "location": "Dortmund, Germany",
-    "summary": ["I am a statistician and data scientist specializing in Natural Language Processing and AI, with a strong passion for using my knowledge to help us to better understand and quantify how societies communicate and evolve.", "In my current research, I am focusing on analyzing political narratives - with a particular interest in how harmful discourse (including conspiracy theories) emerges, transforms, and spreads. My goal is to uncover patterns in the digital information flow and the forces shaping it by designing language models and applying them to corpora of news articles, political speeches or social media posts.", "I aim to contribute research that not only advances AI but also helps to support a functional democracy. I am always interested in connecting with researchers, journalists, institutions, and organizations exploring the intersection of AI, politics, and society."],
+    "summary": ["I am a statistician and data scientist specializing in Natural Language Processing and AI, with a strong passion for using my knowledge to help us to better understand and quantify how societies communicate and evolve.", "In my current research, I am focusing on analyzing political narratives - with a particular interest in how harmful discourse (including conspiracy theories) emerges, transforms, and spreads. My goal is to uncover patterns in the digital information flow and the forces shaping it by designing language models and applying them to corpora of news articles, political speeches or social media posts.", "I aim to contribute research that not only advances AI but also helps to support a functional democracy. I am always interested in connecting with researchers, journalists, institutions, companies, and organizations exploring the intersection of AI, politics, and society."],
     "downloads": [
         {"name": "Short CV", "file": "shortCV.pdf"},
         {"name": "Research CV", "file": "researchCV.pdf"}

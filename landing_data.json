@@ -37,7 +37,7 @@
 
     "also": "",
 
-    "bubble": "Want to get in contact? <a href=\"mailto:website@krlange.de\">Write me a mail!</a>",
+    "bubble": "Want to get in touch? <a href=\"mailto:website@krlange.de\">Write me a mail!</a>",
 
     "research_intro": "I design language models that make political and economic discourse measurable, then point them at news articles, parliamentary speeches and social media posts.",
 
@@ -72,7 +72,7 @@
         "I aim to contribute research that helps to support a functional democracy. I am always interested in connecting with researchers, journalists, institutions, and organizations exploring the intersection of AI, politics, and society."
     ],
 
-    "contact": "The quickest way to reach me is by email. I am always glad to hear from researchers, journalists, institutions and organizations working at the intersection of AI, politics and society about a joint project, a guest lecture or workshop, a data-driven story, or a thesis topic.",
+    "contact": "The quickest way to reach me is by email. I am always glad to hear from researchers, journalists, institutions, companies, and organizations working at the intersection of AI, politics and society about a joint project, a guest lecture or workshop, a data-driven story, or a thesis topic.",
 
     "links": [
         {"name": "GitHub", "url": "https://github.com/K-RLange", "icon": "github"},

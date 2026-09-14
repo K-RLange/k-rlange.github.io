@@ -462,6 +462,7 @@ main { padding: 2.75rem 2rem 4rem; max-width: calc(var(--content-width) + 4rem);
 /* --- hero --- */
 .hero { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2.25rem; align-items: start; }
 .hero h1 { display: flex; align-items: center; gap: .6rem; flex-wrap: wrap; }
+.hero-pronouns { font-family: var(--font); font-size: 1.05rem; font-weight: 400; color: var(--text-muted); }
 .hero-tagline { font-size: 1.15rem; color: var(--text-muted); margin-top: .35rem; }
 .hero-note { font-size: 1rem; color: var(--text-muted); margin-top: 1.1rem; max-width: 60ch; }
 
@@ -1386,9 +1387,12 @@ def generate_landing(data: dict, cv: dict, photo: dict) -> str:
         intro_html = (heading("Introduction", small=True)
                       + f'                <div class="intro">\n{paragraphs}                </div>\n')
 
+    pronouns = data.get("pronouns", "")
+    pronouns_html = f'<span class="hero-pronouns">({pronouns})</span>' if pronouns else ""
+
     html += f"""        <header class="hero" id="introduction">
             <div>
-                <h1>Hey, I'm Kai!</h1>
+                <h1>Hey, I'm Kai!{pronouns_html}</h1>
                 <p class="hero-tagline">{data.get('tagline', '')}</p>
 {intro_html}            </div>
             <div class="hero-side">
