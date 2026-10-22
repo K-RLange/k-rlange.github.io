@@ -19,7 +19,10 @@ from urllib.parse import quote
 # --- Configuration ---
 
 PHOTO_WIDTHS = (280, 560)           # generated portrait sizes (CSS px @1x/@2x)
+PNG_WIDTH = 560                     # fallback PNG, sharp on high-DPI screens
+AVATAR_WIDTH = 64                   # nav avatar, shown at 26 px
 ASSET_DIR = "assets"
+SITEMAP_PAGES = ("", "cv.html", "projects.html")   # "" is the home page
 
 FONT_LINKS = """    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -165,7 +168,7 @@ def prepare_photo(root: Path, photo: str) -> dict:
     Only rebuilds when portrait.png is newer than the existing files.
     Without Pillow it just returns the original.
     """
-    fallback = {"webp": "", "png": photo}
+    fallback = {"webp": "", "png": photo, "avatar": photo}
     src = root / photo
     if not photo or not src.exists():
         return fallback
@@ -173,12 +176,14 @@ def prepare_photo(root: Path, photo: str) -> dict:
     out_dir = root / ASSET_DIR
     stem = Path(photo).stem
     targets = {w: out_dir / f"{stem}-{w}.webp" for w in PHOTO_WIDTHS}
-    png_target = out_dir / f"{stem}-{PHOTO_WIDTHS[0]}.png"
+    png_target = out_dir / f"{stem}-{PNG_WIDTH}.png"
+    avatar_target = out_dir / f"{stem}-{AVATAR_WIDTH}.png"
+    outputs = [*targets.values(), png_target, avatar_target]
 
-    needs_build = not png_target.exists() or any(not p.exists() for p in targets.values())
+    needs_build = any(not p.exists() for p in outputs)
     if not needs_build:
-        newest = max(p.stat().st_mtime for p in [*targets.values(), png_target])
-        needs_build = src.stat().st_mtime > newest
+        oldest = min(p.stat().st_mtime for p in outputs)
+        needs_build = src.stat().st_mtime > oldest
 
     if needs_build:
         try:
@@ -198,16 +203,15 @@ def prepare_photo(root: Path, photo: str) -> dict:
                 im.resize((width, round(im.height * width / im.width)), Image.LANCZOS) \
                   .save(target, "WEBP", quality=86, method=6)
                 print(f"  -> {target.relative_to(root)}")
-            small = im.resize(
-                (PHOTO_WIDTHS[0], round(im.height * PHOTO_WIDTHS[0] / im.width)),
-                Image.LANCZOS,
-            )
-            small.save(png_target, "PNG", optimize=True)
-            print(f"  -> {png_target.relative_to(root)}")
+            for width, target in ((PNG_WIDTH, png_target), (AVATAR_WIDTH, avatar_target)):
+                im.resize((width, round(im.height * width / im.width)), Image.LANCZOS) \
+                  .save(target, "PNG", optimize=True)
+                print(f"  -> {target.relative_to(root)}")
 
     return {
         "webp": ", ".join(f"{ASSET_DIR}/{stem}-{w}.webp {w}w" for w in PHOTO_WIDTHS),
-        "png": f"{ASSET_DIR}/{stem}-{PHOTO_WIDTHS[0]}.png",
+        "png": f"{ASSET_DIR}/{stem}-{PNG_WIDTH}.png",
+        "avatar": f"{ASSET_DIR}/{stem}-{AVATAR_WIDTH}.png",
     }
 
 
@@ -829,7 +833,7 @@ SITE_JS = """<script>
 # --- Shared chrome ---
 
 NAV_ITEMS = [
-    ("index.html", "🏠", "Home", "home"),
+    ("./", "🏠", "Home", "home"),
     ("cv.html", "📄", "CV", "cv"),
     ("projects.html", "🌐", "Web Projects", "projects"),
 ]
@@ -838,7 +842,8 @@ NAV_ITEMS = [
 def head_html(title: str, description: str, data: dict, url_path: str) -> str:
     site = data.get("website", "")
     canonical = f"https://{site}/{url_path}" if site else ""
-    og = f'\n    <meta property="og:url" content="{canonical}">' if canonical else ""
+    og = (f'\n    <link rel="canonical" href="{canonical}">'
+          f'\n    <meta property="og:url" content="{canonical}">') if canonical else ""
     return f"""<!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
@@ -907,8 +912,8 @@ def sidebar_html(data: dict, photo: dict, active: str, sections: list) -> str:
     bio = data.get("sidebar_bio", "")
     return f"""    <aside class="sidebar">
         <div class="sidebar-top">
-            <a class="site-name" href="index.html">
-                <img class="avatar" src="{photo['png']}" alt="" aria-hidden="true" width="26" height="26">
+            <a class="site-name" href="./">
+                <img class="avatar" src="{photo['avatar']}" alt="" aria-hidden="true" width="26" height="26">
                 {name}
             </a>
             {theme_button()}
@@ -937,8 +942,8 @@ def sidebar_html(data: dict, photo: dict, active: str, sections: list) -> str:
 def navbar_html(data: dict, photo: dict, active: str, sections=()) -> str:
     """Top bar. Replaces the sidebar on small screens."""
     return f"""    <header class="navbar">
-        <a class="site-name" href="index.html">
-            <img class="avatar" src="{photo['png']}" alt="" aria-hidden="true" width="26" height="26">
+        <a class="site-name" href="./">
+            <img class="avatar" src="{photo['avatar']}" alt="" aria-hidden="true" width="26" height="26">
             {display_name(data)}
         </a>
         <div class="navbar-actions">
@@ -1371,7 +1376,7 @@ def generate_landing(data: dict, cv: dict, photo: dict) -> str:
         data.get("meta_description")
         or f"{name} — {data.get('position', '')}. Natural language processing, "
            "political narratives and AI for society.",
-        data, "index.html",
+        data, "",
     )
     html += f"""    <div class="layout">
 {navbar_html(data, photo, 'home', home_sections)}{sidebar_html(data, photo, 'home', home_sections)}    <main id="main">
@@ -1522,6 +1527,35 @@ def generate_projects(data: dict, chrome: dict, photo: dict) -> str:
     return html
 
 
+def write_if_changed(path: Path, content: str) -> None:
+    """Write a file only if its content changed, so its mtime stays a
+    reliable lastmod for the sitemap."""
+    if path.exists() and path.read_text(encoding="utf-8") == content:
+        print(f"  = {path.name} (unchanged)")
+        return
+    path.write_text(content, encoding="utf-8")
+    print(f"  -> {path.name}")
+
+
+def generate_seo_files(root: Path, site: str) -> None:
+    """robots.txt and sitemap.xml for search engines."""
+    base = f"https://{site}/"
+    write_if_changed(root / "robots.txt",
+                     f"User-agent: *\nAllow: /\n\nSitemap: {base}sitemap.xml\n")
+
+    urls = ""
+    for page in SITEMAP_PAGES:
+        path = root / (page or "index.html")
+        if not path.exists():
+            continue
+        lastmod = date.fromtimestamp(path.stat().st_mtime).isoformat()
+        urls += f"  <url>\n    <loc>{base}{page}</loc>\n    <lastmod>{lastmod}</lastmod>\n  </url>\n"
+    write_if_changed(root / "sitemap.xml",
+                     '<?xml version="1.0" encoding="UTF-8"?>\n'
+                     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+                     f"{urls}</urlset>\n")
+
+
 def main():
     root = Path(__file__).parent
 
@@ -1532,22 +1566,21 @@ def main():
     photo = prepare_photo(root, landing_data.get("photo") or cv_data.get("photo", "portrait.png"))
 
     print("Generating cv.html...")
-    (root / "cv.html").write_text(generate_cv(cv_data, landing_data, photo), encoding="utf-8")
-    print("  -> cv.html")
+    write_if_changed(root / "cv.html", generate_cv(cv_data, landing_data, photo))
 
     print("Generating index.html...")
-    (root / "index.html").write_text(
-        generate_landing(landing_data, cv_data, photo), encoding="utf-8"
-    )
-    print("  -> index.html")
+    write_if_changed(root / "index.html", generate_landing(landing_data, cv_data, photo))
 
     projects_json = root / "projects_data.json"
     if projects_json.exists():
         print("Generating projects.html...")
-        (root / "projects.html").write_text(
-            generate_projects(load_json(projects_json), landing_data, photo), encoding="utf-8"
-        )
-        print("  -> projects.html")
+        write_if_changed(root / "projects.html",
+                         generate_projects(load_json(projects_json), landing_data, photo))
+
+    site = landing_data.get("website") or cv_data.get("website")
+    if site:
+        print("Generating robots.txt and sitemap.xml...")
+        generate_seo_files(root, site)
 
     print("Done!")
 
